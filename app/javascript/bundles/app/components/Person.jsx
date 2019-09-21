@@ -39,6 +39,11 @@ class Person extends React.Component {
         <ul>
           {person.as_producer.map(movie => this.renderMovie(movie, 'producer'))}
         </ul>
+
+        <h4>Aliases:</h4>
+        <ul>
+          {person.tag_names.join(", ")}
+        </ul>
       </React.Fragment>
     );
   }
