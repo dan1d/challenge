@@ -9,8 +9,9 @@ class MoviePersonRole < ApplicationRecord
   }
 
   validates :person, :movie, :role_type, presence: true
-  
+
   scope :person_attributes, -> { joins(:person).select("people.first_name, people.last_name, person_id") }
+  scope :movie_attributes, -> { joins(:movie).select("movies.title, movies.release_date, movie_id") }
 
   def self.casting
     where(role_type: [0,1]).person_attributes

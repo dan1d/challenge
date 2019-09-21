@@ -12,8 +12,8 @@ class Movies extends React.Component {
   }
 
   renderPerson(person, kind) {
-    return <a key={`${person.person_id}-${kind}`}>
-      {person.first_name} {person.last_name}
+    return <a key={`${person.person_id}-${kind}`} className="mr-1">
+      {person.first_name} {person.last_name},
     </a>
   }
 
@@ -40,7 +40,7 @@ class Movies extends React.Component {
     const { movies } = this.props
     return (
       <React.Fragment>
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <th>ID</th>
