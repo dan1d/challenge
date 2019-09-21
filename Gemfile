@@ -59,3 +59,5 @@ gem 'mini_racer', platforms: :ruby
 gem "faker"
 gem "factory_bot_rails"
 gem 'gutentag', '~> 2.5'
+gem 'rails_admin'
+gem 'devise'
