@@ -3,26 +3,24 @@ import PropTypes from "prop-types"
 
 class Movies extends React.Component {
   static propTypes = {
-    movies: PropTypes.array, // this is passed from the Rails view
+    movies: PropTypes.array
   };
 
   constructor(props) {
-    console.log("HUHUEHUEHU")
     super(props);
   }
 
   renderPerson(person, kind) {
-    return <a key={`${person.person_id}-${kind}`} className="mr-1">
+    return <a key={`${person.person_id}-${kind}`} className="mr-1" href={`/people/${person.person_id}`}>
       {person.first_name} {person.last_name},
     </a>
   }
 
   renderMovie(movie) {
     const { id, title, release_date, casting, directors, producers } = movie;
-    console.log(movie)
     return <tr key={id}>
       <td>{id}</td>
-      <td>{title}</td>
+      <td><a href={`/movies/${id}`}>{title}</a></td>
       <td>{release_date}</td>
       <td>
         {casting.map(person => this.renderPerson(person, "casting"))}

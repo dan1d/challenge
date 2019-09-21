@@ -1,0 +1,2 @@
+<h1><%= @movie.title %></h1>
+<%= react_component("Movie", props: { movie: @movie.as_json(methods: [:casting, :directors, :producers]) }, prerender: false) %>

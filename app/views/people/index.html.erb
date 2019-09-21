@@ -1,2 +1,2 @@
 <h1>People</h1>
-<%= react_component("People", props: { people: @people.as_json(methods: [:as_director, :as_producer, :as_actor_actress, :full_name]) }, prerender: false) %>
+<%= react_component("People", props: { people: @people.as_json(methods: [:as_director, :as_producer, :as_actor_actress, :full_name, :tag_names]) }, prerender: false) %>

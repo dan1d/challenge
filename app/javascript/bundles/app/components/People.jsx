@@ -11,17 +11,17 @@ class People extends React.Component {
   }
 
   renderMovie(movie, kind) {
-    return <a key={`${movie.movie_id}-${kind}`} className="mr-1">
+    return <a key={`${movie.movie_id}-${kind}`} className="mr-1" href={`/movies/${movie.id}`}>
       {movie.title},
     </a>
   }
 
   renderPersonRow(person) {
-    const { id, full_name, aliases, as_director, as_producer, as_actor_actress } = person;
+    const { id, full_name, tag_names, as_director, as_producer, as_actor_actress } = person;
     return <tr key={id}>
       <td>{id}</td>
-      <td>{full_name}</td>
-      <td></td>
+      <td><a href={`/people/${id}`}>{full_name}</a></td>
+      <td>{tag_names.join(", ")}</td>
       <td>
         {as_actor_actress.map(movie => this.renderMovie(movie, "casting"))}
       </td>

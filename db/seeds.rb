@@ -1,7 +1,7 @@
 [Movie, Person, MoviePersonRole].map(&:delete_all)
 
-movies = FactoryBot.create_list(:movie, 100)
-persons = FactoryBot.create_list(:person, 100)
+movies = FactoryBot.create_list(:movie, 10)
+persons = FactoryBot.create_list(:person, 10)
 
 movies.each do |movie|
   persons.index(persons.sample).times do |index|

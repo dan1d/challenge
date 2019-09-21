@@ -3,6 +3,8 @@ class Person < ApplicationRecord
 
   validates :first_name, :last_name, presence: true
 
+  Gutentag::ActiveRecord.call self
+
   def full_name
     "#{first_name} #{last_name}"
   end
