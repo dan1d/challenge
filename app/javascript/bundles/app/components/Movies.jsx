@@ -17,11 +17,11 @@ class Movies extends React.Component {
   }
 
   renderMovie(movie) {
-    const { id, title, release_date, casting, directors, producers } = movie;
+    const { id, title, release_date_roman, casting, directors, producers } = movie;
     return <tr key={id}>
       <td>{id}</td>
       <td><a href={`/movies/${id}`}>{title}</a></td>
-      <td>{release_date}</td>
+      <td>{release_date_roman}</td>
       <td>
         {casting.map(person => this.renderPerson(person, "casting"))}
       </td>

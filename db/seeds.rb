@@ -2,8 +2,8 @@
 
 admin = Admin.create(email: "test@admin.com", password: "testadmin")
 
-movies = FactoryBot.create_list(:movie, 10)
-persons = FactoryBot.create_list(:person, 10)
+movies = FactoryBot.create_list(:movie, 30)
+persons = FactoryBot.create_list(:person, 30)
 
 movies.each do |movie|
   persons.index(persons.sample).times do |index|

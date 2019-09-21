@@ -18,6 +18,7 @@ class Movie extends React.Component {
     const { movie } = this.props;
     return (
       <React.Fragment>
+        <h4>Released: {movie.release_date_roman}</h4>
         <h4>Casting:</h4>
         <ul>
           {movie.casting.map(person => this.renderPerson(person, 'casting'))}
