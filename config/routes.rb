@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   # get 'hello_world', to: 'hello_world#index'
   root "movies#index"
 
-  resources :movies
-  resources :people
+  resources :movies, only: [:index, :show]
+  resources :people, only: [:index, :show]
+
+  namespace :v1, defaults: { format: :json } do
+    resources :movies, only: [:index, :show]
+    resources :people, only: [:index, :show]
+  end
 end
