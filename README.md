@@ -56,3 +56,7 @@ Rails admin used as CMS
 
 * Deployment instructions
   Deployed at heroku
+
+
+* Why react?
+  To show me off because I could work on the view with just plain Rails. :D
