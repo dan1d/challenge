@@ -1,5 +1,4 @@
 import ReactOnRails from 'react-on-rails';
-import 'bootstrap/dist/css/bootstrap.css';
 
 import Movies from '../bundles/app/components/Movies';
 import Movie from '../bundles/app/components/Movie';

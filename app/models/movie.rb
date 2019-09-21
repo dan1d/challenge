@@ -3,7 +3,17 @@ class Movie < ApplicationRecord
 
   validates :title, :release_date, presence: true
 
-  delegate :casting, :directors, :producers, to: :movie_person_roles
+  def casting
+    movie_person_roles.casting.person_attributes
+  end
+
+  def directors
+    movie_person_roles.director.person_attributes
+  end
+
+  def producers
+    movie_person_roles.producer.person_attributes
+  end
 
   def release_date_roman
     release_date.year.roman

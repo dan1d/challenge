@@ -11,7 +11,7 @@ class People extends React.Component {
   }
 
   renderMovie(movie, kind) {
-    return <a key={`${movie.movie_id}-${kind}`} className="mr-1" href={`/movies/${movie.id}`}>
+    return <a key={`${movie.movie_id}-${kind}`} className="mr-1" href={`/movies/${movie.movie_id}`}>
       {movie.title},
     </a>
   }

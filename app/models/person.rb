@@ -18,6 +18,6 @@ class Person < ApplicationRecord
   end
 
   def as_actor_actress
-    movie_person_roles.where(role_type: [0,1]).movie_attributes
+    movie_person_roles.casting.movie_attributes
   end
 end
