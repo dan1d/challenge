@@ -13,6 +13,14 @@
   <body>
     <div class="container">
       <%= render "shared/nav_bar" %>
+      <% unless signed_in? %>
+        <pre>
+          <code>
+            admin: test@admin.com
+            password: testadmin
+          </code>
+        </pre>
+      <% end %>
       <%= yield %>
     </div>
   </body>
